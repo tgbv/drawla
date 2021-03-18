@@ -1,3 +1,5 @@
+github.com/alexsasharegan/dotenv v0.0.0-20171113213728-090a4d1b5d42 h1:Mj1wcfVgYD7odK6tBkBPN/0KHpiDApwnGlcHclfU5iY=
+github.com/alexsasharegan/dotenv v0.0.0-20171113213728-090a4d1b5d42/go.mod h1:8KjIUiYilt2g1LINCCvsOtJ+f2uAdSTYO2A/b97lPw8=
 github.com/ambelovsky/go-structs v1.1.0 h1:LXj4/mHnYw0qhXQhOo96+ULGQ88H8qMcZd5SHef8boY=
 github.com/ambelovsky/go-structs v1.1.0/go.mod h1:zN3RBXQvxgjjq/Q/WZS7p5AEK+qC9mNg7ycnvoQ63Ak=
 github.com/ambelovsky/gosf v0.0.0-20201109201340-237aea4d6109 h1:Tp8GVfUOEmJftBqi4+/aXTwJzm24POo6wIHeuTqaT+Y=
@@ -9,6 +11,8 @@ github.com/goji/goji v2.0.2+incompatible h1:Tj92SLCG2tsrUk77FMQ8NNERvTdsgUeX+iE4
 github.com/goji/goji v2.0.2+incompatible/go.mod h1:z5nhnH5eywWZQcFjJ+Ok6dS1qDOWOJaQAoCBnK+eJhQ=
 github.com/gorilla/websocket v1.4.2 h1:+/TMaTYc4QFitKJxsQ7Yye35DkWvkdLcvGKqM+x0Ufc=
 github.com/gorilla/websocket v1.4.2/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
+github.com/joho/godotenv v1.3.0 h1:Zjp+RcGpHhGlrMbJzXTrZZPrWj+1vfm90La1wgB6Bhc=
+github.com/joho/godotenv v1.3.0/go.mod h1:7hK45KPybAkOC6peb+G5yklZfMxEjkZhHbwpqxOKXbg=
 github.com/mitchellh/mapstructure v1.4.1 h1:CpVNEelQCZBooIPDn+AR3NpivK/TIKU8bDxdASFVQag=
 github.com/mitchellh/mapstructure v1.4.1/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
 goji.io v1.1.0 h1:7QNQWwPiGPyOlpH9UDNh+F9BdGMLXr60lfvPSnigA8o=
