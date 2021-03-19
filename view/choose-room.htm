@@ -21,11 +21,14 @@
             </div>
 
           <div class="col s12" id="new_l">
-            new
+            <br>
+            <a class="btn green waves-effect" href="/room/new">New lobby</a>
           </div>
 
           <div class="col s12" id="existing_l">
-            existing
+            <br>
+            <input type="text" placeholder="Enter lobby ID here..." id="inputRoomId">
+            <a onclick="jumpToRoom()" class="btn green waves-effect">Enter lobby</a>
           </div>            
         </div>
 
@@ -41,6 +44,11 @@
 
         const _ = function(el){
             return document.getElementById(el)
+        }
+
+
+        const jumpToRoom = function(){
+            window.location = `/room/${_("inputRoomId").value}`
         }
 
         const Modal = M.Modal.init(_('modal1'), {
