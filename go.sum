@@ -6,6 +6,8 @@ github.com/ambelovsky/gosf v0.0.0-20201109201340-237aea4d6109 h1:Tp8GVfUOEmJftBq
 github.com/ambelovsky/gosf v0.0.0-20201109201340-237aea4d6109/go.mod h1:MUREokfMKREm1fOm2babarrkYdk/dGHWY+ITC3qHHPQ=
 github.com/ambelovsky/gosf-socketio v0.0.0-20201109193639-add9d32f8b19 h1:suVCm9PiIhz7ftTbWQNe7u2YjVfr8AEuUiNWKWApdMM=
 github.com/ambelovsky/gosf-socketio v0.0.0-20201109193639-add9d32f8b19/go.mod h1:o0+8DH+3X+FEOgSdNud0+8jJAsjtR9H3hF+O10Zcj/c=
+github.com/dchest/uniuri v0.0.0-20200228104902-7aecb25e1fe5 h1:RAV05c0xOkJ3dZGS0JFybxFKZ2WMLabgx3uXnd7rpGs=
+github.com/dchest/uniuri v0.0.0-20200228104902-7aecb25e1fe5/go.mod h1:GgB8SF9nRG+GqaDtLcwJZsQFhcogVCJ79j4EdT0c2V4=
 github.com/goji/goji v1.1.0 h1:T3ezVol+mr541r6jnhrH4gN+iJ6gxVj1CmjVKoZXILw=
 github.com/goji/goji v2.0.2+incompatible h1:Tj92SLCG2tsrUk77FMQ8NNERvTdsgUeX+iE4J5Xw+Jw=
 github.com/goji/goji v2.0.2+incompatible/go.mod h1:z5nhnH5eywWZQcFjJ+Ok6dS1qDOWOJaQAoCBnK+eJhQ=

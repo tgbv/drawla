@@ -14,7 +14,7 @@ func Init(m *goji.Mux) {
 	// homepage
 	m.HandleFunc(pat.Get("/"), controllers.Home)
 
-	// create && join a new room
+	// create a new room
 	m.HandleFunc(pat.Get("/room/new"), controllers.NewRoom)
 
 	// join custom room

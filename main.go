@@ -23,7 +23,7 @@ func main() {
 	mux := goji.NewMux()
 
 	// pass the mux to the router as reference
-	// the routes will be bounded with controllers
+	// the routes will be binded with controllers
 	routes.Init(mux)
 
 	// listen HTTP server
@@ -35,11 +35,11 @@ func main() {
 			panic(error)
 		}
 	})()
-	log.Println("HTTP server started listening..")
+	log.Println("HTTP server started listening on port:", os.Getenv("L_PORT"))
 
 	// listen ws server
 	go ws.Init()
-	log.Println("WS server started listening..")
+	log.Println("WS server started listening on port:", os.Getenv("L_WS_PORT"))
 
 	// waiter
 	var input string

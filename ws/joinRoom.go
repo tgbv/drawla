@@ -6,17 +6,22 @@ import (
 )
 
 /*
-*	handle start drawing signal from client
+*	joins client to custom room
  */
-func startDrawing(c *gosf.Client, r *gosf.Request) *gosf.Message {
+func joinRoom(c *gosf.Client, r *gosf.Request) *gosf.Message {
 	rid := r.Message.Text
 
 	// if room does not exist, disconnect without a word
 	if state.Rooms[rid] == nil {
 		c.Disconnect()
+		return nil
 	}
 
-	gosf.Broadcast(rid, "startDrawing", r.Message)
+	c.Join(rid)
 
-	return nil
+	m := new(gosf.Message)
+	m.Success = true
+	m.Text = rid
+
+	return m
 }

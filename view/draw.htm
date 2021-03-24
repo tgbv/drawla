@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Room [{{ .room_id }}]</title>
 
     <style>
         #main{
@@ -70,13 +70,23 @@
           </div>
     </div>
 
+    <p style="position: absolute;bottom: 0px;right: 0px;">Room ID: {{ .room_id }}</p>
+
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js" integrity="sha512-ACqMrfAtm537AWzgx/xQ57JnFxXeq8RylQMGg4y/e6M2ew4Z8NycE8aId/Bt2ZE+w1gNsox3MgwxKl7SGMRdtA==" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"></script>
     <script>
-
-        var socket = io.connect('ws://localhost:9999', { transports: ['websocket'] });
+        const room_id = "{{ .room_id }}"
+        var socket = io.connect('ws://localhost:9999', { 
+            transports: ['websocket'],
+            query:{
+                room: room_id
+            },
+        });
+        socket.emit('joinRoom', {
+            text: room_id
+        })
 
         socket.emit('moveMouse', { text: 'Hello world.' }, function(response) {
             //console.log(response);
@@ -93,25 +103,32 @@
 
             const myId = Math.floor(Math.random()*100)
             let drawing = false 
+            let meDrawing = false
             
             // start drawing
             canvas.on('mouse:down', e=>{
+                meDrawing = true
                 socket.emit('startDrawing', {
-                    body:e.absolutePointer
+                    body:e.absolutePointer,
+                    text: room_id,
                 })
             })
 
             // actual drawing
             canvas.on('mouse:move', e=>{
-                socket.emit('draw', {
-                    body:e.absolutePointer
-                })
+                if(meDrawing)
+                    socket.emit('draw', {
+                        body:e.absolutePointer,
+                        text: room_id,
+                    })
             })
 
             // stop drawing
             canvas.on('mouse:up', e=>{
+                meDrawing = false
                 socket.emit('stopDrawing', {
-                    body:e.absolutePointer
+                    body:e.absolutePointer,
+                    text: room_id,
                 })
             })
 

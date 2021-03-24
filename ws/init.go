@@ -14,6 +14,9 @@ const DRAWING_ROOM string = ""
  */
 func Init() {
 
+	// ask server to join room
+	gosf.Listen("joinRoom", joinRoom)
+
 	// start drawing
 	gosf.Listen("startDrawing", startDrawing)
 
